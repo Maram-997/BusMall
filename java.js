@@ -2,6 +2,7 @@
 let minAttempts = 0;
 let maxAttempts = 10;
 let products = [];
+let attemptsEl = document.getElementById('attempts');
 
 function productImage(productName){
     this.productName = productName.split('.')[0];
@@ -35,7 +36,7 @@ function renderProducts(){
 
 while( leftImageIndex === middleImageIndex || leftImageIndex === rightImageIndex || rightImageIndex === middleImageIndex){
   leftImageIndex = generateProduct();
-  rightImageIndex =generateProduct();
+  rightImageIndex = generateProduct();
 }
 
 }
