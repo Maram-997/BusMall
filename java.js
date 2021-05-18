@@ -82,6 +82,7 @@ function countingClicks(event){
         else if ( event.target.id === 'right'){
             products[rightImageIndex].clicks++;
         }
+        settingsItem();
         renderProducts();
     }
 
@@ -105,6 +106,7 @@ for ( let i = 0; i < products.length; i++){
     liEl.textContent = `${products[i].productName} has ${products[i].views} views and has ${ products[i].clicks} clicks.`
     numberOfClicks.push(products[i].clicks);
     numberOfViews.push(products[i].views);
+
 }
 chartRender();
 }
@@ -148,4 +150,17 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+ }
+function settingsItem (){
+    let data = JSON.stringify(products);
+    localStorage.setItem('productsString', data);
 }
+function gettingItems (){
+    let StringObject = localStorage.getItem('productsString');
+    let normalObject = JSON.parse(StringObject);
+    if( normalObject !== null){
+        products = normalObject;
+    }
+    
+}
+gettingItems();
