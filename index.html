@@ -6,14 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Mall</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Big+Shoulders+Display:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <h1>Bus Mall</h1>
+    <h1><a href="index.html">Bus Mall</a></h1>
 </header>
-<span>Number Of Attempts :
+<div class="inputContainer" >
+    <label for="insertedAttempts">Please enter Number of Attempts</label>
+    <input type="text" id="insertedAttempts" name="insertedAttempts"  placeholder="Enter a Number">
+    <button id="inputBtn" type="button" onclick="submiting();">Submit</button>
+
+</div>
+<div class="attemptsContainer" >
+<span>Attempts Counter :
 <span id="attempts" ></span>
-</span>
+</span> 
+</div>
 <div id="imagesContainer" >
     <img id="left" src="" alt="" width="200" height="200">
     <img id="middle" src="" alt="" width="200" height="200">

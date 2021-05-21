@@ -1,12 +1,13 @@
 'use strict';
 let minAttempts = 0;
-let maxAttempts = Number(prompt('Please enter number of attempts?'));
+let maxAttempts;
 let products = [];
 let attemptsEl = document.getElementById('attempts');
 let numberOfClicks = [];
 let numberOfViews = [];
 let newProductsName = [];
 let displayedIndex = [];
+
 
 function productImage(productName){
     this.productName = productName.split('.')[0];
@@ -23,6 +24,13 @@ let productsImages = ['bag.jpg','banana.jpg','bathroom.jpg', 'boots.jpg','breakf
 for ( let i = 0; i < productsImages.length; i++){
     new productImage(productsImages[i]);
 }
+
+
+function submiting(){
+    let submittedAttempts = document.getElementById('insertedAttempts').value;
+  maxAttempts = submittedAttempts;
+}
+
 function generateProduct(){
     return Math.floor(Math.random() * products.length);
 }
